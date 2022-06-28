@@ -7,14 +7,17 @@ export default {
   component: Button,
 };
 
-export const Default = () => {
+export const Default = (args) => {
   return (
     <>
-      <Button primary={+true} className="mr-2">Button</Button>
-      <Button secondary={+true} className="mr-2">Button</Button>
-      <Button danger={+true} className="mr-2">Button</Button>
-      <Button success={+true} className="mr-2">Button</Button>
-      <Button disabled={+true}>Button</Button>
+      <Button primary={+true} className="mr-2">{args.label}</Button>
+      <Button secondary={+true} className="mr-2">{args.label}</Button>
+      <Button danger={+true} className="mr-2">{args.label}</Button>
+      <Button success={+true} className="mr-2">{args.label}</Button>
+      <Button disabled={+true}>{args.label}</Button>
     </>
   );
+};
+Default.args = {
+  label: 'Button Text',
 };
