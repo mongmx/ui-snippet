@@ -3,14 +3,18 @@ import React from 'react';
 import Button from './Button';
 
 export default {
-  title: 'Example/Button',
+  title: 'Button',
   component: Button,
 };
 
-const Template = (args) => <Button {...args} primary={+true} full={+true} >X</Button>;
-
-export const Primary = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-// Primary.args = {
-//   primary: true,
-// };
+export const Default = () => {
+  return (
+    <>
+      <Button primary={+true} className="mr-2">Button</Button>
+      <Button secondary={+true} className="mr-2">Button</Button>
+      <Button danger={+true} className="mr-2">Button</Button>
+      <Button success={+true} className="mr-2">Button</Button>
+      <Button disabled={+true}>Button</Button>
+    </>
+  );
+};

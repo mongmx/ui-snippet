@@ -24,6 +24,7 @@ const Button = ({ ...props }) => {
           ${props.primary && 'bg-blue-600 hover:bg-blue-700 active:bg-blue-600'} 
           ${props.secondary && 'bg-gray-400 hover:bg-gray-500 active:bg-gray-400'} 
           ${props.danger && 'bg-red-600 hover:bg-red-700 active:bg-red-600'} 
+          ${props.success && 'bg-green-600 hover:bg-green-700 active:bg-green-600'} 
           ${props.disabled && 'cursor-not-allowed bg-gray-300'}
         `}
       >
